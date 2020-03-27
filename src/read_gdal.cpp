@@ -133,7 +133,7 @@ std::string basename_sds(std::string f) {
 	if (std::string::npos != j) {
 		f.erase(0, j + 1);
 	}
-	f = std::regex_replace(f, std::regex(".hdf$"), "");
+	f = std::regex_replace(f, std::regex(".hdf$"), std::string(""));
 	f = std::regex_replace(f, std::regex(".nc$"), "");
 	f = std::regex_replace(f, std::regex("\""), "");
 	
